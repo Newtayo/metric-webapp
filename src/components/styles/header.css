@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  width: 98vw;
+  align-items: center;
+  background-color: brown;
+  padding: 1%;
+}
+
+.fa-microphone {
+  color: white;
+  margin-left: 5%;
+  font-size: 5vw;
+  margin-right: 5%;
+}
+
+.fa-cog {
+  color: white;
+  margin: 0;
+  padding-top: 0;
+  font-size: 5vw;
+}
+
+.apptitle {
+  font-size: 6vw;
+  white-space: nowrap;
+  color: white;
+  margin-right: 10%;
+}
+
+.back {
+  margin-right: 15%;
+}
+
+@media only screen and (min-width: 768px) {
+  .fa-microphone {
+    display: none;
+  }
+
+  .fa-cog {
+    display: none;
+  }
+
+  .header {
+    height: 7vh;
+  }
+
+  .apptitle {
+    font-size: 2vw;
+    margin-left: 20%;
+  }
+}
