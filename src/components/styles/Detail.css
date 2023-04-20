@@ -1,0 +1,31 @@
+table {
+  border: 2px solid black;
+  width: 95vw;
+  margin: auto;
+  background-color: brown;
+}
+
+table tr:nth-child(odd) {
+  background-color: rgb(218, 75, 75);
+}
+
+td {
+  border: 2px solid black;
+  text-align: left;
+  color: white;
+}
+
+.coat {
+  margin: 5% auto;
+  width: 50vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .coat {
+    width: 25vw;
+  }
+
+  table {
+    width: auto;
+  }
+}
