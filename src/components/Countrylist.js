@@ -68,7 +68,7 @@ const Countrylist = () => {
 
                 <h2 className="name">{list.countryName}</h2>
                 <h2 className="globalpopulation pop">
-                  Population:
+                  Population :
                   {list.population.toLocaleString()}
                 </h2>
 
