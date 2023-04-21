@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { getCountries } from '../redux/country/countrySlice';
 import './styles/countrylist.css';
 
 const Countrylist = () => {
   const {
     countryList, totalCountry, isLoading, error,
   } = useSelector((state) => state.country);
-  const [input, setInput] = useState('');
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getCountries());
-  },
-  [dispatch]);
+  const [sheet, setsheet] = useState('');
 
   if (isLoading) {
     return (
@@ -40,18 +33,18 @@ const Countrylist = () => {
       <header className="heading">
         <article className="summary">
           <h2 className="nocontry">Global Population</h2>
-          <h4 className="globalpopulation">{totalCountry.toLocaleString()}</h4>
+          <h4 className="globalpopulation">{totalCountry}</h4>
         </article>
       </header>
 
-      <input type="search" placeholder="Search Country by name" value={input} onChange={(e) => (setInput(e.target.value))} />
+      <input type="search" placeholder="Search Country by name" value={sheet} onChange={(e) => (setsheet(e.target.value))} />
       <h2 className="title"> POPULATION BY COUNTRY</h2>
-      <section className="countrycontainer">
+      <section className="countrycontainer" data-testid="hello">
         { countryList.filter((value) => {
-          if (input === '') {
+          if (sheet === '') {
             return value;
           }
-          if (value.countryName.toLowerCase().includes(input.toLowerCase())) {
+          if (value.countryName.toLowerCase().includes(sheet.toLowerCase())) {
             return value;
           }
           return false;
@@ -68,8 +61,8 @@ const Countrylist = () => {
 
                 <h2 className="name">{list.countryName}</h2>
                 <h2 className="globalpopulation pop">
-                  Population :
-                  {list.population.toLocaleString()}
+                  Population:
+                  {list.population}
                 </h2>
 
               </NavLink>
