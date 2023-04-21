@@ -27,7 +27,7 @@ test('renders the countries information in the store', async () => {
 
   );
 
-  expect(screen.getByTestId('hello')).toBeInTheDocument();
+  expect(screen.getByTestId('country-section')).toBeInTheDocument();
   expect(screen.getByText('Barbados')).toBeInTheDocument();
 });
 

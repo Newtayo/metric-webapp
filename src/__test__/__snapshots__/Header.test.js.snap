@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tests for components Snapshot test for Homepage 1`] = `
+exports[`tests for components Snapshot test for Header 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

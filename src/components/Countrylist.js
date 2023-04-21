@@ -8,7 +8,7 @@ const Countrylist = () => {
   const {
     countryList, totalCountry, isLoading, error,
   } = useSelector((state) => state.country);
-  const [sheet, setsheet] = useState('');
+  const [search, setSearch] = useState('');
 
   if (isLoading) {
     return (
@@ -37,14 +37,14 @@ const Countrylist = () => {
         </article>
       </header>
 
-      <input type="search" placeholder="Search Country by name" value={sheet} onChange={(e) => (setsheet(e.target.value))} />
+      <input type="search" placeholder="Search Country by name" value={search} onChange={(e) => (setSearch(e.target.value))} />
       <h2 className="title"> POPULATION BY COUNTRY</h2>
-      <section className="countrycontainer" data-testid="hello">
+      <section className="countrycontainer" data-testid="country-section">
         { countryList.filter((value) => {
-          if (sheet === '') {
+          if (search === '') {
             return value;
           }
-          if (value.countryName.toLowerCase().includes(sheet.toLowerCase())) {
+          if (value.countryName.toLowerCase().includes(search.toLowerCase())) {
             return value;
           }
           return false;

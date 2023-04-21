@@ -35,7 +35,7 @@ exports[`renders the countries information in the store 1`] = `
     </h2>
     <section
       class="countrycontainer"
-      data-testid="hello"
+      data-testid="country-section"
     >
       <div
         class="countrycard"
