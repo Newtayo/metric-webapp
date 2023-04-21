@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const url = 'https://restcountries.com/v3.1/all';
 
@@ -12,12 +13,8 @@ const initialState = {
 
 export const getCountries = createAsyncThunk('countryList/getCountries', async (_, thunkAPI) => {
   try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
+    const response = await axios.get(url);
+    return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue("Couldn't fetch data");
   }

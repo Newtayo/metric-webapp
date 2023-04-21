@@ -1,12 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
-<div>
-  <i
-    className="fa-li fa fa-spinner fa-spin"
-  />
-  <h1>
-    Loading ...
-  </h1>
-</div>
+exports[`renders the countries information in the store 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <header
+      class="heading"
+    >
+      <article
+        class="summary"
+      >
+        <h2
+          class="nocontry"
+        >
+          Global Population
+        </h2>
+        <h4
+          class="globalpopulation"
+        >
+          2
+        </h4>
+      </article>
+    </header>
+    <input
+      placeholder="Search Country by name"
+      type="search"
+      value=""
+    />
+    <h2
+      class="title"
+    >
+       POPULATION BY COUNTRY
+    </h2>
+    <section
+      class="countrycontainer"
+      data-testid="hello"
+    >
+      <div
+        class="countrycard"
+      >
+        <a
+          class="displaycard"
+          href="/detail/Barbados"
+        >
+          <div>
+            <img
+              alt="https://flagcdn.com/w320/bb.png"
+              class="flag"
+              src="https://flagcdn.com/w320/bb.png"
+            />
+            <i
+              aria-hidden="true"
+              class="fa fa-arrow-right"
+            />
+          </div>
+          <h2
+            class="name"
+          >
+            Barbados
+          </h2>
+          <h2
+            class="globalpopulation pop"
+          >
+            Population:287371
+          </h2>
+        </a>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
 `;
