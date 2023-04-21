@@ -1,0 +1,145 @@
+.container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(172, 35, 35);
+}
+
+.heading {
+  width: 100vw;
+  margin: 0;
+  background-color: rgb(202, 84, 84);
+  background-image: url('../../Assets/world.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 50%;
+  height: 25vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.countrycard {
+  width: 45%;
+  margin: auto;
+}
+
+.countrycontainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.summary {
+  width: 50vw;
+  margin: 0 0 0 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.nocontry {
+  font-size: 4vw;
+  margin: 25% 10% 0 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.globalpopulation {
+  font-size: 3vw;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.displaycard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 43vw;
+  border: 2px solid black;
+  background-image: url('../../Assets/Worldmap.svg');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: rgb(175, 52, 52);
+  text-decoration: none;
+  text-align: left;
+  height: 30vh;
+  margin: auto;
+  padding: 2%;
+}
+
+.flag {
+  width: 10vw;
+}
+
+.name {
+  font-size: 5vw;
+  margin: 5% 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  text-align: end;
+}
+
+.pop {
+  text-align: end;
+}
+
+.fa {
+  color: white;
+  text-align: right;
+  margin: 0 0 0 65%;
+}
+
+.title {
+  width: 94vw;
+  margin: 1% auto;
+  background-color: brown;
+  text-align: left;
+  color: white;
+  font-size: 4vw;
+  border: 2px solid black;
+  font-weight: 200;
+}
+
+input {
+  width: 95vw;
+  margin: 1% auto;
+}
+
+.fa-spin {
+  align-self: center;
+  font-size: 10vw;
+  margin-top: 30%;
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .nocontry {
+    font-size: 1.5vw;
+    margin: 5% 0 0 0;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .globalpopulation {
+    font-size: 1vw;
+  }
+
+  .flag {
+    width: 4vw;
+  }
+
+  .name {
+    font-size: 1.5vw;
+    text-align: left;
+  }
+
+  .fa {
+    margin: 0 0 0 70%;
+  }
+}
