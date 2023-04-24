@@ -10,7 +10,6 @@ const Header = () => {
     dispatch(getCountries());
   },
   [dispatch]);
-
   return (
     <div className="header">
       <NavLink to="/" className="back">
